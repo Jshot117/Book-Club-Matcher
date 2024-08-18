@@ -7,8 +7,10 @@ import Profile from "./Components/Profile";
 function App() {
   return (
     <>
-      <Profile></Profile>
-      <bookList></bookList>
+      <div>
+        <Profile></Profile>
+        <bookList></bookList>
+      </div>
     </>
   );
 }
