@@ -1,12 +1,12 @@
 
 import { useState } from "react";
 import viteLogo from "/vite.svg";
-import loginForm from "./Components/loginForm";
+import LoginForm from "./Components/loginForm";
 
 function login() {
     return (
         <>
-            <loginForm></loginForm>
+            <LoginForm></LoginForm>
         </>
     );
 }
