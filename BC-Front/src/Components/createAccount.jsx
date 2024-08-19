@@ -3,12 +3,30 @@ import react, { useState } from 'react';
 export default function CreateAccount() {
     const [username, setUsername] = useState("");
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("should now send to backend for registering the account", username);
-        setUsername("");
+      
+        try {
+            const response = await fetch('http://localhost:3000/api/create', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username: username }),
+            });
+
+            const data = await response.json();
+            console.log(data.message);
+
+            // Reset the input field after submitting
+            setUsername("");
+        } catch (error) {
+            console.error("Error:", error);
+        }
+        
+        console.log("should now send to backend for Creation", username);
     }
-    return(
+    return (
         <div>
             <h1>Create Account</h1>
             <form onSubmit={handleSubmit}>
