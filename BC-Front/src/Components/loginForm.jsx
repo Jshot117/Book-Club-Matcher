@@ -1,6 +1,6 @@
 import react, { useState } from 'react';
 
-export default function loginForm() {
+export default async function loginForm() {
     const [inputText, setInputText] = useState("");
 
     const handleSubmit = async (e) => {
