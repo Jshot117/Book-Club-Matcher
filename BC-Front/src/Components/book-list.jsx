@@ -1,11 +1,11 @@
 import react from 'react';
 
-function bookList() {
+function BookList() {
     return (
         <div>
             <h1>The Hunger Games</h1>
         </div>
-    )
+    );
 }
 
-export default bookList;
+export default BookList; 

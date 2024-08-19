@@ -1,16 +1,15 @@
-import bookList from './Components/book-list'
+
 import { useState } from "react";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import Profile from "./Components/Profile";
+import BookList from './Components/book-list'
 
 function App() {
   return (
     <>
-      <div>
-        <Profile></Profile>
-        <bookList></bookList>
-      </div>
+      <Profile></Profile>
+      <BookList></BookList>
     </>
   );
 }
