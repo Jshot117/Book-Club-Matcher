@@ -1,6 +1,6 @@
 import react, { useState } from 'react';
 
-export default function loginForm() {
+export default async function loginForm() {
     const [inputText, setInputText] = useState("");
 
     const handleSubmit = async (e) => {
@@ -30,6 +30,13 @@ export default function loginForm() {
         //setInputText("");
     };
 
+    const response = await fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username: inputText }),
+    });
     return (
         <div>
             <form onSubmit={handleSubmit}>
