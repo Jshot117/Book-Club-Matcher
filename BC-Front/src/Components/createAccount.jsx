@@ -23,14 +23,14 @@ export default function CreateAccount() {
         } catch (error) {
             console.error("Error:", error);
         }
-        
+
         console.log("should now send to backend for Creation", username);
     }
     return (
         <div>
             <h1>Create Account</h1>
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="Enter username"></input>
+                <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Enter username"></input>
                 <button type="submit">submit</button>
             </form>
         </div>
